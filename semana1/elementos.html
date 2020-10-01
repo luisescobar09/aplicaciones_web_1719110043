@@ -3,25 +3,93 @@
       <head>
         <title>Elementos del front end</title>
       </head>
-      <body bgcolor="ffb233">
+      <body bgcolor="de7717">
+        
           <h1>
-            <center style="color:red; font-size:105px"> <br>
+            <center style="color:#bb1313; font-size:100px"> 
             "TAGS en HTML5"</center>
-            </h1>
-          <h2>
-             <style="color:blue; font-size:65px"> 
-              Hello world! welcome to my repl.it account  
-          </h2>
-          <h3 style="color:000000; font-size:35px; text-align: justify">
-            <br><i> A web application is an application or computer tool accessible from any browser, either through the Internet (the usual) or through a local network, so I'm going to start developing this type of app. <br>
-            <i/>
-            <p> 
-              <center>
-              <br>If you wanna check my GitHub account,
-                <a href="https://github.com/luisescobar09/aplicaciones_web_1719110043"target="_blank">click here.
-                </a>
-              </center>
-            </p>
-          </h3>
+          </h1>
+          <br> <h1 style="color:#211cc1; font-size:70px">
+              Estructura básica de una página web:  
+          </h1>
+
+          <br> <h2 style="color:green; font-size:40px">
+              - DOCTYPE: ("< !DOCTYPE >")
+          </h2>  
+          <p style="font-size:25px; text-align: justify">  
+            La etiqueta Doctype o “Declaración del tipo de documento” es lo primero que debe tener todo documento web compatible. Su propósito es informar al navegador el tipo de documento que está a punto de procesar.        
+          </p> <br>
+
+          <h2 style="color:purple; font-size:40px">
+             - HTML: (< html > < /html >) 
+          </h2>  
+          <p style="font-size:25px; text-align: justify">  
+            Constituye la raíz de todo documento HTML bien formado y se supone que encierre a todos los demás elementos entre sus etiquetas. <br> 
+            Incluye elementos como: 
+            <strong>< head >, < title >, < body >, < header >, < footer >, < article >, < section >, < p> , < div >, < span >, < img >, < aside >, < audio >, < canvas >, < datalist >, < details >, < embed >, < nav >, < output >, < progress >, < video >, < ul >, < ol >, < li > </strong> y muchos otros. 
+          </p> <br>
+
+          <h2 style="color:maroon; font-size:40px">
+             - HEAD: (< head > < /head >)
+          </h2>  
+          <p style="font-size:25px; text-align: justify">  
+            El elemento head es el contenedor de una serie de elementos que proveen metadatos (datos que describen otros datos) para el documento. Estos metadatos pueden especificar el título (elemento title), el juego de caracteres, el autor, la descripción o palabras clave del documento (elemento meta), una hoja de estilo o información relacional (elemento link) o declaraciones de estilo incrustadas (elemento style), entre otros. <br> 
+            La presencia del elemento title es obligatoria dentro de la sección head de un documento HTML. La única situación en la que puede ser omitido es cuando el título es provisto en otro lugar (por ejemplo, por el elemento padre de un iframe).
+          </p> <br>
+
+          <h2 style="color:navy; font-size:40px">
+             - TITLE: (< title > < /title >)
+          </h2>  
+          <p style="font-size:25px; text-align: justify">  
+            El elemento title provee un título o nombre para el documento. Este título debe proporcionar una corta, pero precisa descripción del contenido del documento o su propósito aun cuando es sacada de contexto (como, por ejemplo, cuando se muestra en los resultados de una búsqueda). 
+          </p> <br>
+
+          <h2 style="color:green; font-size:40px">
+             - BODY: (< body > < /body >)
+          </h2>  
+          <p style="font-size:25px; text-align: justify">  
+            El elemento body es el contenedor para todos los aspectos representables de un documento. Este es el lugar donde los autores arrojan todos los elementos y contenidos que sus visitantes alcanzarán. El elemento body es parte de la estructura básica de un documento.</br> 
+              <strong> <i style="font-size:35px; text-align: justify"> Atributos generales:</i> </strong> 
+            <ul style="font-size:25px; text-align: justify">
+              <li><strong>alink:</strong> Color del texto de los hipervínculos cuando se selecciona. </li>
+              <li> <strong>background:</strong> URI de una imagen para usar como fondo.</li>
+              <li> <strong>bgcolor:</strong> Color de fondo del documento. </li>
+              <li> <strong>bottommargin:</strong> El margen de la parte inferior del < body >.</li>
+              <li> <strong>leftmargin:</strong> El margen de la izquierda del < body >. </li> 
+              <li> <strong>link:</strong> Color del texto de los enlaces de hipertexto no visitados. </li>
+              <li> <strong>rightmargin:</strong> El margen de la derecha del < body >. </li>
+              <li> <strong>text:</strong> Color de primer plano del texto. <br> </li>
+              <li> <strong>topmargin:</strong> El margen de la parte superior del < body >. </li>
+              <li> <strong>vlink:</strong> Color del texto de los enlaces de hipertexto visitados. </li>
+            </ul>
+          </p> <br>
+
+          <h2 style="color:purple; font-size:40px">
+             - H1: (< h1 > < /h1 >)
+          </h2>  
+          <p style="font-size:25px; text-align: justify">  
+            El elemento h1 representa un encabezado de nivel 1. Los encabezados (desde h1 a h6) son títulos que definen secciones implícitas en el documento y organizan el contenido en una estructura jerárquica.<br>
+            Cuando los encabezados son combinados con el elemento section las secciones del documento dejan de ser implícitas para estar exactamente definidas. En tales casos, el encabezado de una sección debería preceder a todos los demás elementos de esta.
+          </p> <br> 
+
+          <h2 style="color:navy; font-size:40px">
+             - P: (< p > y < /p >, la de cierre es opcional).
+          </h2>  
+          <p style="font-size:25px; text-align: justify">  
+            El elemento p representa un párrafo. Se considera párrafo a un bloque de texto compuesto de una o más oraciones que se refieren a un tema en particular y que normalmente se separa de otros por un espacio en blanco.</br> 
+              <strong> <i style="font-size:35px; text-align: justify"> Atributos generales:</i> </strong> 
+            <ul style="font-size:25px; text-align: justify">
+              <li><strong>title:</strong> Título consultivo del elemento. </li>
+              <li> <strong>style:</strong> Información de estilo en línea.</li>
+              <li> <strong>id:</strong> Identificador único a nivel de documento. </li>
+              <li> <strong>class:</strong> Identificador a nivel de documento.</li>
+              <li> <strong>dir:</strong> Dirección del texto débil/neutral. </li> 
+              <li> <strong>lang:</strong> Información sobre el idioma. </li>
+            </ul>
+            <strong> <i style="font-size:35px; text-align: justify"> Atributos específicos:</i> </strong> 
+            <ul style="font-size:25px; text-align: justify">
+              <li> <strong>align ("left", "center", "right", o "justify"):</strong> Indica la alineación horizontal con relación al contexto. </li>
+
+          </p> <br>
       </body>
   </html>
