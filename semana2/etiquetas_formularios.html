@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Etiquetas para formulario</title>
+		<style>
+		    table {
+		        width: 95%; 
+            text-align: center;
+            margin: 0 auto;
+		    }
+        table thead{
+		        background-color:#239b56;
+		        color: white;
+            font-size: 25px;   
+        }
+        table tbody {
+          bgcolor: dark;
+        }
+        table tbody tr:nth-child(odd) {
+          bgcolor: #ffff;
+        }
+		</style>
+	</head>
+	<body bgcolor = "a3e4d7">
+		
+		<h1 style= "color:#bb1313; font-size:70px"> <center>Etiquetas para formularios:</h1>
+		
+		
+		<table id="table" border="5">
+		    <caption style= "color:blue; font-size:40px"><i><b>Tipos de datos admitidos por las etiquetas de html input, select, textarea y radio: <p></caption> <br>
+		    <thead>
+		        <tr style="font-size:30px">
+		            <th>Etiqueta:</th>
+                <th>Descripción:</th>
+                <th>Ejemplo de uso:</th>
+		        </tr>
+		    </thead>
+            <trbody>
+              <tr style="font-size:20px"> 
+                  <td style="font-size:30px"><i><b>&lt;input&gt;</td>
+                  <td>Se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario.</td>
+                  <td> <p>Escribe algo: <input type="text" name="nombre" required> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="button"&gt;</td>
+                  <td>Se usa para crear un botón en el que se puede hacer click sin ningún valor por defecto, es decir, no tiene un comportamiento predeterminado.</td>
+                  <td> <input type="button" value="Haz click" style='width:80px; height:30px; color:blue'> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="checkbox"&gt;</td>
+                  <td>Elemento de entrada que te permite insertar un vector o array de valores.</td>
+                  <td> <label><input type="checkbox" id="cbox1" value="first_checkbox">Primer checkbox</label><br>
+                  <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">Segundo checkbox</label>  </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="color"&gt;</td>
+                  <td>Elemento de interfaz de usuario que permite a los usuarios especificar un color, bien mediante una interfaz visual de selección, bien a través de un cuadro de texto donde ingresar un valor hexadecimal en el formato «#rrggbb».</td>
+                  <td> <p>Elige un color: <input type="color" value="#e67e22"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="date"&gt;</td>
+                  <td>Crea campos de entrada que permiten a los usuarios proporcionar una fecha, bien a través de un cuadro de texto que valida automáticamente el contenido, o bien mediante una interfaz especial de selección de fechas. El valor resultante incluye el año, el mes y el día, pero no la hora.</td>
+                  <td> <label for="start">Fecha nacimiento:</label>
+                  <input type="date" id="start" name="trip-start"
+                        value="2001-10-09"
+                        min="1960-01-01" max="2020-12-31"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="datetime-local"&gt;</td>
+                  <td>Crea controles de entrada que permitan al usuario ingresar fácilmente tanto una fecha como una hora, incluido el año, mes y día, así como la hora en horas y minutos.</td>
+                  <td> <label for="meeting-time">Elige la hora de entrada:</label> <input type="datetime-local" id="meeting-time"
+                  name="meeting-time" value="2020-10-10T23:30"
+                  min="2020-10-05T00:00" max="2020-10-11T00:00"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="email"&gt;</td>
+                  <td>Se utilizan para permitir que el usuario ingrese y edite una dirección de correo o, si se especifica el atributo multiple, una lista de direcciones de correo.</td>
+                  <td> <label for="email">Ingresa tu email de GMAIL:</label> <input type="email" id="email"
+                  pattern=".+@gmail.com" size="35" required> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="file"&gt;</td>
+                  <td>Permite que el usuario elija uno o más archivos del almacenamiento de su dispositivo. Una vez elegidos, los archivos pueden cargarse en un servidor mediante el envío de formularios o manipularse mediante código JavaScript y la API de archivos.</td>
+                  <td> <label for="avatar">Elige una foto de perfil:</label><input type="file"
+                  id="avatar" name="avatar"
+                  accept="image/png, image/jpeg"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="hidden"&gt;</td>
+                  <td>Permite que los desarrolladores web incluyan datos que los usuarios no pueden ver ni modificar cuando se envía un formulario. Por ejemplo, el ID del contenido que se está solicitando o editando actualmente, o un token de seguridad único. Las entradas ocultas son completamente invisibles en la página renderizada y no hay forma de hacerlas visibles en el contenido de la página.</td>
+                  <td> <p>Contenido oculto </p> <input id="prodId" name="prodId" type="hidden" value="xm234jq"></td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="image"&gt;</td>
+                  <td>Se utilizan para crear botones gráficos de envío, es decir, botones de envío que toman la forma de una imagen en lugar de texto.</td>
+                  <td> <input id="image" type="image" width="100" height="30" alt="Login"
+                  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"></td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="month"&gt;</td>
+                  <td>Crea campos de entrada que permiten al usuario ingresar un mes y un año, lo que permite ingresar fácilmente un mes y un año. El valor es una cadena cuyo valor tiene el formato "AAAA-MM", donde AAAA es el año de cuatro dígitos y MM es el número del mes.</td>
+                  <td> <label for="start">Mes de inicio:</label> <input type="month" id="start" name="start" min="2020-01" value="2020-10"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="number"&gt;</td>
+                  <td>Usados para permitir al usuario ingresar un número. Éstos incluyen validación incorporada para rechazar entradas no numéricas. El navegador puede optar por proveer flechas de pasos para permitir al usuario incrementar y decrementar el valor usando su ratón o símplemente pulsando con la punta del dedo.</td>
+                  <td> <label for="edad">Ingresa tu edad (solo mayores de edad):</label> <input type="number" id="edad" name="edad" min="18" max="100"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="password"&gt;</td>
+                  <td>Proporciona una forma para que el usuario ingrese una contraseña de forma segura. El elemento se presenta como un control de editor de texto, sin formato, de una línea, en el que el texto está oculto para que no pueda leerse, generalmente reemplazando cada carácter con un símbolo como el asterisco ("*") o un punto ("•").</td>
+                  <td><p>Ingresa contraseña:<p> <input type="password" pattern="{8,12}"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="radio"&gt;</td>
+                  <td>Generalmente se utiliza en grupos de radio: colecciones de botones de radio que describen un conjunto de opciones relacionadas. Solo se puede seleccionar un botón de opción en un grupo determinado al mismo tiempo. Los botones de opción se representan normalmente como círculos pequeños, que se rellenan o resaltan cuando se seleccionan.</td>
+                  <td><p>Seleciona la capital del estado de Hidalgo:</p>
+                    <div>
+                      <input type="radio" id="huey" name="drone" value="huey"
+                            checked>
+                      <label for="huey">Actopan</label>
+                    </div>
+
+                    <div>
+                      <input type="radio" id="dewey" name="drone" value="dewey">
+                      <label for="dewey">Pachuca</label>
+                    </div>
+
+                    <div>
+                      <input type="radio" id="louie" name="drone" value="louie">
+                      <label for="louie">Tulancingo</label>
+                    </div> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="range"&gt;</td>
+                  <td>Permite que el usuario especifique un valor numérico comprendido entre un valor mínimo y máximo. El valor exacto, sin embargo, no se considera importante. Se repesenta típicamente como un "tirador" o un control deslizante en lugar de un campo de texto como otros tipos de input. </td>  <td><input type="range"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="reset"&gt;</td>
+                  <td>Se representan como botones, con un controlador de eventos de clic predeterminado que restablece todas las entradas en el formulario a sus valores iniciales.</td>  
+                  <td> <form>
+                    <div class="controls">
+                        <label for="id">ID:</label>
+                        <input type="text" id="id" name="id" /><br>
+                        <input type="reset" value="Restablecer">
+                        <input type="submit" value="Enviar">
+                    </div> </form> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="search"&gt;</td>
+                  <td>Son campos de texto diseñados para que el usuario ingrese consultas de búsqueda. Estos son funcionalmente idénticos a las entradas de texto, pero el agente de usuario puede aplicarles un estilo diferente.</td>
+                   <td> <form> <div>
+                     <input type="search" id="mySearch" name="q">
+                      <button>Buscar</button>
+                      </div>
+                      </form> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="submit"&gt;</td>
+                  <td>Se representan como botones. Cuando ocurre el evento de clic (generalmente porque el usuario hizo clic en el botón), el agente de usuario intenta enviar el formulario al servidor.</td>
+                   <td> <form> 
+                    <div>
+                      <label for="example">Queja, comentario o sugerencia:</label>
+                      <input id="example" type="text" name="text">
+                    </div>
+                    <div>
+                      <input type="submit" value="Enviar">
+                    </div>
+                  </form> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="tel"&gt;</td>
+                  <td>Se utilizan para permitir que el usuario introduzca y edite un número de teléfono. A diferencia de &lt;input type = "email"> y &lt;input type = "url">, el valor de entrada no se valida automáticamente a un formato en particular antes de que se pueda enviar el formulario, porque los formatos de los números de teléfono varían mucho en todo el mundo.</td>
+                   <td> <label for="phone">Número telefónico:</label>
+                    <input type="tel" id="phone" name="phone"
+                          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                          required> <br>
+                    <small>Formato: 123-456-7890</small> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="text"&gt;</td>
+                  <td>Crea campos de texto básicos de una sola línea.</td>
+                   <td> <label for="name">Nombre (4 a 12 caracteres):</label> <input type="text" id="name" name="name" required minlength="4" maxlength="12" size="10"> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="time"&gt;</td>
+                  <td>Crea campos de entrada diseñados para permitirle al usuario ingresar fácilmente una hora (horas y minutos, y opcionalmente segundos).</td>
+                   <td> <label for="appt">Horario para tu cita:</label> <input type="time" id="appt" name="appt" min="09:00" max="18:00" required> <br> <small>Horario de atención: 9am-6pm</small> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="url"&gt;</td>
+                  <td>Se utilizan para permitir al usuario ingresar y editar una URL.</td>
+                   <td> <label for="url">Ingresa tu URL https://:</label><input type="url" name="url" id="url"  placeholder="https://ejemplo.com" pattern="https://.*" size="30" required> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;input type="week"&gt;</td>
+                  <td>Crea campos de entrada que permitan la entrada fácil de un año más el número de semana durante ese año (es decir, semana 1 a 52 o 53).</td>
+                   <td> <label for="week">Elige una semana en Mayo o Junio:</label>
+                  <input type="week" name="week" id="camp-week"
+                        min="2020-W18" max="2020-W26" require> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:30px"><i><b>&lt;select&gt;</td>
+                  <td>representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos &lt;option>, los cuales pueden ser agrupados por elementos &lt;optgroup>. La opcion puede estar preseleccionada por el usuario.</td>
+                   <td> <form> <select name="select"> <option value="value1">Valor 1</option> <option value="value2" >Valor 2</option> <option value="value3"selected>Valor 3</option> </select> <br>
+                    <input type="submit" value="Enviar">
+                  </form>  </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;select number&gt; atributo size</td>
+                  <td>El atributo de tamaño especifica el número de opciones visibles en una lista desplegable. Si el valor del atributo de tamaño es mayor que 1, pero menor que el número total de opciones en la lista, el navegador agregará una barra de desplazamiento para indicar que hay más opciones para ver.</td>
+                   <td> <form> <label for="talleres">Elige un taller:</label> <select name="talleres" id="talleres" size="3" weight="20px"> <option value="soccer">Futbol</option>  <option value="basket">Baloncesto</option>  <option value="voly">Voleibol</option>  <option value="atle">Atletismo</option></select> <br>
+                    <input type="submit" value="Enviar">
+                  </form>  </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;select required&gt; atributo</td>
+                  <td>El atributo requerido es un atributo booleano. Cuando está presente, especifica que el usuario debe seleccionar un valor antes de enviar el formulario.</td>
+                   <td> <form>  <label for="talleres">Elige un taller:</label> <select name="talleres" id="talleres" required> <option value="">Ninguno</option> <option value="soccer">Futbol</option>  <option value="basket">Baloncesto</option>  <option value="voly">Voleibol</option>  <option value="atle">Atletismo</option></select> <br>
+                    <input type="submit" value="Enviar">
+                  </form>  </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;select name = "text"&gt; atributo</td>
+                  <td>El atributo de nombre especifica el nombre de una lista desplegable. El atributo de nombre se utiliza para hacer referencia a elementos en un JavaScript o para hacer referencia a datos de formulario después de que se envía un formulario.</td>
+                   <td> <form>
+                    <label for="talleres">Elige un taller:</label>
+                    <select name="talleres" id="talleres">
+                      <option value="soccer">Futbol</option>
+                      <option value="basket">Baloncesto</option>
+                      <option value="voly">Voleibol</option>
+                      <option value="atl">Atletismo</option>
+                    </select><br>
+                    <input type="submit" value="Enviar">
+                  </form> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;select multiple&gt; atributo</td>
+                  <td>Cuando está presente, especifica que se pueden seleccionar varias opciones a la vez. La selección de varias opciones varía en diferentes sistemas operativos y navegadores:<br>
+                  <li><strong>Windows:</strong> mantenga presionado el botón de control (ctrl) para seleccionar varias opciones</li><br>
+                  <li><strong>Mac:</strong> mantenga presionado el botón de comando para seleccionar múltiples opciones</li><br>
+                  Debido a las diferentes formas de hacer esto, y debido a que tiene que informar al usuario que la selección múltiple está disponible, es más fácil usar casillas de verificación.</td>
+                   <td> <form>
+                    <label for="talleres">Elige un taller:</label>
+                    <select name="talleres" id="talleres" multiple>
+                      <option value="soccer">Futbol</option>
+                      <option value="basket">Baloncesto</option>
+                      <option value="voly">Voleibol</option>
+                      <option value="atl">Atletismo</option>
+                    </select><br>
+                    <input type="submit" value="Enviar">
+                  </form> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;select form = "form_id "&gt; atributo</td>
+                  <td>El atributo de formulario especifica el formulario al que pertenece la lista desplegable. El valor de este atributo debe ser igual al atributo id de un elemento &lt;form> en el mismo documento. </td>
+                   <td> <form id="tallerform">
+                        <label for="fname">Nombre (s):</label>
+                        <input type="text" id="fname" name="fname">
+                        <input type="submit">
+                      </form> <label for="talleres">Elige un taller:</label>
+                    <select name="talleres" id="talleres" form="tallerform">
+                      <option value="soccer">Futbol</option>
+                      <option value="basket">Baloncesto</option>
+                      <option value="voly">Voleibol</option>
+                      <option value="atl">Atletismo</option>
+                    </select>   </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;select disabled&gt; atributo</td>
+                  <td>El atributo desactivado es un atributo booleano.<br>
+                  Cuando está presente, especifica que la lista desplegable debe estar deshabilitada.<br>
+                  Una lista desplegable deshabilitada es inutilizable y no se puede hacer clic en ella.<br>
+                  El atributo deshabilitado se puede configurar para evitar que un usuario use la lista desplegable hasta que se cumpla alguna otra condición (como seleccionar una casilla de verificación, etc.). Luego, un JavaScript puede eliminar el valor deshabilitado y hacer que la lista desplegable sea utilizable. </td>
+                   <td> <form 
+                       <label for="talleres">Elige un taller:</label>
+                    <select name="talleres" id="talleres" disabled>
+                      <option value="soccer">Futbol</option>
+                      <option value="basket">Baloncesto</option>
+                      <option value="voly">Voleibol</option>
+                      <option value="atl">Atletismo</option>
+                    </select> <br>
+                    <input type="submit" value="Enviar">
+                    </form>  </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;select autofocus&gt; atributo</td>
+                  <td>El atributo desactivado es un atributo booleano.<br> Cuando está presente, especifica que la lista desplegable debe enfocarse automáticamente cuando se carga la página.</td>
+                   <td> <form 
+                       <label for="talleres">Elige un taller:</label>
+                    <select name="talleres" id="talleres" autofocus>
+                      <option value="soccer">Futbol</option>
+                      <option value="basket">Baloncesto</option>
+                      <option value="voly">Voleibol</option>
+                      <option value="atl">Atletismo</option>
+                    </select> <br>
+                    <input type="submit" value="Enviar">
+                    </form>  </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:30px"><i><b>&lt;textarea&gt;</td>
+                  <td>Representa un control para la edición mutilínea de texto sin formato.</td>
+                   <td> <textarea name="textarea" rows="5" cols="35">Escribe algo aquí:</textarea>  </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea wrap = "soft/hard"&gt; atributo</td>
+                  <td>El atributo de ajuste especifica cómo se ajustará el texto de un área de texto cuando se envíe en un formulario. <br>
+                  <li><strong>soft:</strong> el texto en el área de texto no se ajusta cuando se envía en un formulario. Esto es predeterminado.</li> <br>
+                  <li><strong>hard:</strong> el texto en el área de texto se ajusta (contiene nuevas líneas) cuando se envía en un formulario. Cuando se usa "hard", se debe especificar el atributo "cols".</li>
+                  </td>
+                   <td> <form>
+                      <textarea rows="2" cols="20" name="usrtxt" wrap="hard">Contendrá nuevas líneas (si las hay) cuando se envíe en un formulario.</textarea>
+                      <input type="submit" value="Enviar">
+                      </form>  </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea rows = "number"&gt; atributo</td>
+                  <td>El atributo de filas especifica la altura visible de un área de texto, en líneas. <br>
+                  El tamaño de un área de texto también se puede especificar mediante las propiedades de alto y ancho de CSS.
+                  </td>
+                   <td> <textarea rows="4" cols="40">El atributo de filas especifica la altura visible de un área de texto, en líneas. Puedes especificar mediante las propiedades de alto y ancho de CSS.</textarea>
+                    <p>Este área de texto tiene 4 filas visibles, puedes cambiarlo usando el valor del atributo "rows". </p> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea required"&gt; atributo</td>
+                  <td>El atributo requerido es un atributo booleano. Cuando está presente, especifica que se requiere / debe completar un área de texto (para enviar el formulario). </td>
+                   <td> <form>  <textarea rows="4" cols="35" name="comment" required></textarea> <input type="submit" value="Enviar"> </form> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea readonly&gt; atributo</td>
+                  <td>El atributo de solo lectura es un atributo booleano. Cuando está presente, especifica que un área de texto debe ser de solo lectura.<br> En un área de texto de solo lectura, el contenido no se puede cambiar, pero un usuario puede tabularlo, resaltarlo y copiar contenido de él.<br> El atributo de solo lectura se puede configurar para evitar que un usuario use un área de texto hasta que se cumpla alguna otra condición (como seleccionar una casilla de verificación, etc.). Luego, se requiere un JavaScript para eliminar el valor de solo lectura y hacer que el área de texto sea editable. </td>
+                   <td><p>Solo lectura:</p> <textarea rows="4" cols="35" readonly>El contenido no se puede cambiar, pero puedes tabularlo, resaltarlo y copiar contenido de él. </textarea> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea placeholder = "text" &gt;atributo</td>
+                  <td>El atributo de marcador de posición especifica una pequeña pista que describe el valor esperado de un área de texto. La pequeña sugerencia se muestra en el área de texto antes de que el usuario ingrese un valor. </td>
+                  <td> <p>¿Qué es un sitio web?</p> <textarea rows="4" cols="35" placeholder="Ingresa aqui tu respuesta..."></textarea></td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea name = "text"&gt; atributo</td>
+                  <td>El atributo de nombre especifica un nombre para un área de texto.<br>
+                  El atributo de nombre se usa para hacer referencia a elementos en un JavaScript, o para hacer referencia a datos de formulario después de que se envía un formulario.</td>
+                  <td> <form>
+                    <textarea rows="4" cols="35" name="comment">Escribe algo...</textarea>
+                    <input type="submit" value="Enviar">
+                    </form></td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea maxlength = "number"&gt; atributo</td>
+                  <td>El atributo "maxlength" especifica la longitud máxima (en caracteres) de un área de texto.</td>
+                  <td> 
+                    <textarea rows="4" cols="35" maxlength="20">Escribe algo...</textarea> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea form = "form_id"&gt; atributo</td>
+                  <td>El atributo de formulario especifica el formulario al que pertenece el área de texto. El valor de este atributo debe ser igual al atributo id de un elemento &lt;form> en el mismo documento.</td>
+                  <td> <form action="/action_page.php" id="usrform">Nombre: <input type="text" name="usrname"> <input type="submit" value="Enviar"> </form> <br> <textarea rows="4" cols="35"  name="comment" form="usrform"> Dirección</textarea> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea disabled&gt; atributo</td>
+                  <td>El atributo desactivado es un atributo booleano. Cuando está presente, especifica que el área de texto debe estar deshabilitada. Un área de texto deshabilitada no se puede utilizar y el texto no se puede seleccionar (no se puede copiar).<br>El atributo deshabilitado se puede configurar para evitar que un usuario use el área de texto hasta que se cumpla alguna otra condición (como seleccionar una casilla de verificación, etc.). Entonces, un JavaScript podría eliminar el valor deshabilitado y hacer que el área de texto sea utilizable.</td>
+                  <td> <textarea disabled>Un área de texto deshabilitada no se puede utilizar y el texto no se puede seleccionar (no se puede copiar).</textarea> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea name="myname" dirname="myname.dir"> atributo</td>
+                  <td>El atributo dirname permite el envío de la dirección del texto del área de texto. <br>El valor del atributo dirname es siempre el nombre del área de texto, seguido de ".dir".</td>
+                  <td> <form> Texto:<br> <textarea name="explanation"dirname="explanation.dir"></textarea><br> <input type="submit" value="Enviar"> </form> </td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea cols = "number"> atributo</td>
+                  <td>El atributo cols especifica el ancho visible de un área de texto.<br>El tamaño de un área de texto también se puede establecer mediante las propiedades de altura y ancho de CSS.</td>
+                  <td> <textarea rows="4" cols="35">Este cuadro de texto el atributo "cols" tiene un valor de "35".</textarea></td>
+              </tr>
+
+              <tr style="font-size:20px"> 
+                  <td style="font-size:25px"><i><b>&lt;textarea autofocus> atributo</td>
+                  <td>El atributo de enfoque automático es un atributo booleano.<br>Cuando está presente, especifica que el área de texto debe enfocarse automáticamente cuando se carga la página.</td>
+                  <td> <textarea rows="4" cols="35" autofocus>El área de texto debe enfocarse automáticamente cuando se carga la página.</textarea> </td>
+              </tr>
+ 	        </trbody>
+		</table>
+	</body>
+</html>
