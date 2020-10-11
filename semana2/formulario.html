@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario</title>
+      <style >
+/*Formatear el formulario en dos columnas*/
+        body{
+        font:13px/1.6 Tahoma, sans-serif;
+        background: #F5F5F5;
+        }
+        .izquierda{
+        float:left;
+        clear:left;
+        }
+        .derecha {
+        float:right;
+        clear:right;
+        }
+        ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+        }
+        #contenedor{
+        background: #FFF;
+        border: 1px solid silver;
+        margin: 1em auto;
+        padding: 1em;
+        width: 768px;
+        }
+        span.requerido{
+        font-size:1.3em;
+        font-weight: bold;
+        color: #C00;
+        }
+        h2{
+        font:normal 2em arial,sans-serif;
+        margin:0;
+        }
+        ul li.botones {
+        border-top: 2px solid #CCC;
+        clear: both;
+        float: none;
+        padding: 1em 0;
+        margin-top: 1em;
+        text-align: right;
+        width: 100%;
+        }
+        ul li.botones input{
+        font-size: 1.3em;
+        }
+        ul li{
+        margin: 0.5em 0;
+        padding: 0.5em;
+        width: 46%;
+        }
+        ul li label.titulo{
+        font-weight: bold;
+        }
+        ul li div span{
+        float: left;
+        padding: 0.3em 0;
+        }
+        ul li div span.completo {
+        width: 100%;
+        }
+        ul li div.span.mitad {
+        width: 50%;
+        }
+        ul li div.span.tercio {
+        width: 33%;
+        }        
+        ul li div.span.tercioderecha {
+        width: 33%;
+        align: right;
+        }
+        ul li div.span.dostercios {
+        width: 66%;
+        }
+        ul li div span label {
+        display: block;
+        font: normal 0.8em arial, sans-serif;
+        color: #333;
+        }
+        ul li p.ayuda{
+        display: none;
+        }
+        ul li input {
+        text-transform: none;
+        padding: 0.2em;
+        }
+        input#nombre, input#apellido1, input#apellido2, input#direccion{
+        text-transform: none;
+        width: 260px;
+        }
+        input#email {
+        text-transform: none;
+        width: 260px;
+        }
+        input#codigopostal {
+        width: 80px;
+        }
+        select#provincia {
+        width: 60px;
+        height: 22px;
+        }
+        select#pais {
+        width: 90px;
+        height: 20px;
+        }
+        input#telefonofijo, input#telefonomovil, input#mensaje {
+        width: 135px;
+        }
+        input#mensaje {
+        width: 400px;
+        height: 60px;
+        }
+        /* Cambiar el color en el: hover y resaltar los campos en el: focus*/
+        ul li:hover {
+        background:-color: #FF9;
+        }
+        ul li.botones: hover {
+        background:-color: transparent;
+        }
+        ul li input:focus {
+        border: 2px solid #E6B700;
+        }
+        /* Formatear el formulario a una columna*/
+        ul li.izquierda, ul li.derecha {
+        float: none;
+        width: auto;
+        }
+        ul li {
+        overflow: hidden;
+        }
+        ul li label.titulo {
+        float: left;
+        width: 150px;
+        }
+        ul li div {
+        margin-left: 160px;
+        }
+        /*Aspecto final del formulario con los mensajes de ayuda*/
+        h2{
+        margin-bottom: 0.3em;
+        }
+        ul li{
+        border-top: 1px solid #CCC;
+        margin: 0;
+        padding: 1em;
+        }
+        ul li.botones {
+        margin: 0;
+        }
+        ul li label.titulo {
+        text-align: right;
+        width: 100px;
+        }
+        ul li div{
+        margin-left: 110px;
+        overflow: hidden;
+        }
+        ul li{
+        position: relative;
+        }
+        ul li: hover p.ayuda {
+        display: block;
+        margin: 0.3em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        }
+        </style>
+        </head>
+
+        <body>
+          <div id="contenedor">
+          <h2>Ingresa los siguientes datos:</h2>
+          <form method="post" action="#">
+            <ul>
+              <li class="izquierda">
+                <label class="titulo" for="nombre">Nombre completo: <span
+                class="requerido">*</span></label>
+                <div>
+                <span class="completo">
+                <input id="nombre" name="nombre" value="" />
+                <label for="nombre">Nombre(s)</label>
+                </span>
+
+                <span class="completo">
+                <input id="apellido1" name="apellido1" value="" />
+                <label for="apellido1">Primer Apellido</label>
+                </span>
+
+                <span class="completo">
+                <input id="apellido2" name="apellido2" value="" />
+                <label for="apellido2">Segundo Apellido</label>
+                </span>
+                </div>
+              </li>
+
+              <li class="derecha">
+                <label class="titulo" for="nacimiento">Fecha de nacimiento: <span
+                class="requerido">*</span></label>
+
+                <div>
+                <span class="tercio">
+                  <input type="date" id="start" name="fechanac" value="2020-10-11" min="1960-01-01" max="2020-10-11">
+                <label for="fechanac">Día - Mes - Año</label>
+                </span>
+
+                <span class="tercioderecha">
+                <input type="number" id="edad" name="edad" min="1" max="100" value="1">
+                <label for="edad">Edad</label>
+                </span>
+                </span>
+                </div>
+              </li>
+
+
+              <li class="derecha">
+                <label class="titulo" for="direccion">Sexo y estado civil:<span
+                class="requerido">*</span></label>
+
+                <div>
+                <span class="completo">
+                <p ><i style="font-size:15.5px">Sexo:</i>
+                <input type="radio" name="hm" value="h"> Masculino
+                <input type="radio" name="hm" value="m"> Femenino
+                <input type="radio" name="o" value="o"> Otro
+                </p>
+                </span>
+
+                <span class="dostercios">
+                <select id="edocivil" name="edocivil" required>
+                <option value=></option>
+                <option value="edocivil">SOLTERO</option>
+                <option value="edocivil">CASADO</option>
+                <option value="edocivil">DIVORSIADO</option>
+                <option value="edocivil">VIUDO</option>
+                <option value="edocivil">UNIÓN LIBRE</option>
+                </select>
+                <label for="edocivil">Estado civil</label>
+                </span>
+                </div>
+              </li>
+
+
+              <li class="derecha">
+                <label class="titulo" for="direccion">Dirección: <span
+                class="requerido">*</span></label>
+
+                <div>
+                <span class="completo">
+                <input style="height=200px" id="direccion" name="direccion" value="";/>
+                <label for="direccion">Calle, Número, Colonia</label>
+                </span>
+
+                <span class="tercio">
+                <input name="codigopostal" onkeyup="var no_digito = /\D/g; 
+                this.value = this.value.replace(no_digito , '');" type="text">
+                <label for="codigopostal">Código Postal</label>
+                </span>
+
+                <span class="dostercios">
+                <input id="municipio" name="municipio" />
+                <label for="municipio">Ciudad</label>
+                </span>
+
+                <span class="dostercios">
+                <select id="estado" name="estado" required>
+                <option value=></option>
+                <option value="estado">AGUASCALIENTES</option>
+                <option value="estado">BAJA CALIFORNIA</option>
+                <option value="estado">BAJA CALIFORNIA SUR</option>
+                <option value="estado">CAMPECHE</option>
+                <option value="estado">CDMX</option>
+                <option value="estado">CHIHUAHUA</option>
+                <option value="estado">CHIAPAS</option>
+                <option value="estado">COAHUILA</option>
+                <option value="estado">COLIMA</option>
+                <option value="estado">DURANGO</option>
+                <option value="estado">EDO DE MEXICO</option>
+                <option value="estado">GUANJUATO</option>
+                <option value="estado">GUERRERO</option>
+                <option value="estado">HIDALGO</option>
+                <option value="estado">JALISCO</option>
+                <option value="estado">MICHOACAN</option>
+                <option value="estado">MORELOS</option>
+                <option value="estado">NAYARIT</option>
+                <option value="estado">NUEVO LEÓN</option>
+                <option value="estado">OAXACA</option>
+                <option value="estado">PUEBLA</option>
+                <option value="estado">QUERÉTARO</option>
+                <option value="estado">QUINTANA ROO</option>
+                <option value="estado">SAN LUIS POTOSÍ</option>
+                <option value="estado">SINALOA</option>
+                <option value="estado">SONORA</option>
+                <option value="estado">TABASCO</option>
+                <option value="estado">TAMAULIPAS</option>
+                <option value="estado">TLAXCALA</option>
+                <option value="estado">VERACRUZ</option>
+                <option value="estado">YUCATÁN</option>
+                <option value="estado">ZACATECAS</option>
+                </select>
+                <label for="estado">Estado</label>
+                </span>
+                <span class="tercio">
+                <select id="pais" name="pais" disabled>
+                <option value="pais1">MÉXICO</option>
+                </select>
+                <label for="pais">País</label>
+                </span>
+                </div>
+              </li>
+
+              <li class="izquierda">
+                <label class="titulo" for="email">Correo electrónico: <span
+                class="requerido">*</span></label>
+                <div>
+                <span class="completo">
+                <input type="email" id="email" placeholder="ejemplo@dominio.com" size="35" required="">
+                </span>
+              </li>
+
+              <li class="derecha">
+                <label class="titulo" for="telefonofijo">Teléfono: <span
+                class="requerido">*</span></label>
+                <div>
+                <span class="mitad">
+                <input name="telefonomovil" onkeyup="var no_digito = /\D/g; 
+                this.value = this.value.replace(no_digito , '');" type="tel">
+                <label for="codigopostal"></label>
+                </span>
+                </div>
+              </li>
+
+              <li class="botones">
+                <input id="alta" type="submit" value="Enviar &rarr;" />
+              </li>
+        </ul>
+      </form>
+    </div>
+  </body>
+</html>
