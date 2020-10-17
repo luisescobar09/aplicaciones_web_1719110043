@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Formulario</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container bg-light ">
+		<div class="row justify-content-center mt-2 pt-2">
+			<div class="col-md-7 ">
+				<h1 class="display-4">Formulario:</h1>
+				<hr class="bg-success">
+				<p class="pb-0 mb-0">Ingresa los siguientes datos:</p>
+				<p class="text-danger small pt-0 mt-0">* Todos los campos son obligatorios.</p>
+				<!--- formulario -->
+        <form action="#">
+
+          <div class="row form-group">
+						<label for="matricula" class="col-form-label col-md-4">Matrícula:</label>
+            <div class="col-md-6">
+              <input name="matricula" onkeyup="var no_digito = /\D/g; 
+                this.value = this.value.replace(no_digito , '');"   type="text" id="matricula" maxlength="10" class="form-control">
+              <small id="matriculaayuda" class="form-text text-muted">Solo números, máx. 10 digitos.</small>
+            </div>
+          </div>
+
+					<div class="row form-group">
+						<label for="nombre" class="col-form-label col-md-4">Nombre(s):</label>
+            <div class="col-md-6">
+              <input type="text" name="nombre" value="" id="nombre" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+						<label for="apellido1" class="col-form-label col-md-4">Primer apellido:</label>
+            <div class="col-md-6">
+              <input type="text" name="apellido1" value="" id="apellido1" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+						<label for="apellido2" class="col-form-label col-md-4">Segundo apellido:</label>
+            <div class="col-md-6">
+              <input type="text" name="apellido2" value="" id="apellido2" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+						<label for="edad" class="col-form-label col-md-4">Edad:</label>
+            <div class="col-md-6">
+              <input type="number" id="edad" name="edad" min="5" max="100" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+						<label for="nacimiento" class="col-form-label col-md-4">Fecha de nacimiento:</label>
+            <div class="col-md-6">
+              <input type="date" id="nacimiento" name="nacimiento" value="2020-10-18" min="1960-01-01" max="2020-10-18" maxlength="3" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+						<label for="estado" class="col-form-label col-md-4">Estado:</label>
+            <div class="col-md-6">
+              <select class="form-control" id="estado" name="estado" required >
+                <option value=>SELECCIONA</option>
+                <option value="estado1">AGUASCALIENTES</option>
+                <option value="estado2">BAJA CALIFORNIA</option>
+                <option value="estado3">BAJA CALIFORNIA SUR</option>
+                <option value="estado4">CAMPECHE</option>
+                <option value="estado5">CDMX</option>
+                <option value="estado6">CHIHUAHUA</option>
+                <option value="estado7">CHIAPAS</option>
+                <option value="estado8">COAHUILA</option>
+                <option value="estado9">COLIMA</option>
+                <option value="estado10">DURANGO</option>
+                <option value="estado11">EDO DE MEXICO</option>
+                <option value="estado12">GUANJUATO</option>
+                <option value="estado13">GUERRERO</option>
+                <option value="estado14">HIDALGO</option>
+                <option value="estado15">JALISCO</option>
+                <option value="estado16">MICHOACAN</option>
+                <option value="estado17">MORELOS</option>
+                <option value="estado18">NAYARIT</option>
+                <option value="estado19">NUEVO LEÓN</option>
+                <option value="estado20">OAXACA</option>
+                <option value="estado21">PUEBLA</option>
+                <option value="estado22">QUERÉTARO</option>
+                <option value="estado23">QUINTANA ROO</option>
+                <option value="estado24">SAN LUIS POTOSÍ</option>
+                <option value="estado25">SINALOA</option>
+                <option value="estado26">SONORA</option>
+                <option value="estado27">TABASCO</option>
+                <option value="estado28">TAMAULIPAS</option>
+                <option value="estado29">TLAXCALA</option>
+                <option value="estado30">VERACRUZ</option>
+                <option value="estado31">YUCATÁN</option>
+                <option value="estado32">ZACATECAS</option>
+                </select>
+            </div>
+          </div>
+
+
+          <div class="row form-group">
+            <label for="genero" class="col-form-label col-md-5">Género:</label>
+           <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="genero" id="genero" value="hombre">
+              <label class="form-check-label" for="mujer">Hombre</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="genero" id="genero" value="mujer">
+              <label class="form-check-label" for="mujer">Mujer</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="genero" id="genero" value="otro">
+              <label class="form-check-label" for="otro">Otro</label>
+            </div>
+          </div><br>
+
+        <button type="submit" class="btn btn-success btn-lg my-1 float-right">Guardar</button>
+
+        </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
